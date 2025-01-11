@@ -1,7 +1,13 @@
 import Image from 'next/image'
 import { Users, BookOpen, Heart, Home } from 'lucide-react'
+import { ReactNode } from 'react'
 
-export default function About() {
+interface MissionStatProps {
+  icon: ReactNode;
+  text: string;
+}
+
+export default function AboutUs() {
   return (
     <section id="about" className="py-20 bg-gradient-to-b from-white to-babyblue-100">
       <div className="container mx-auto px-6">
@@ -47,7 +53,7 @@ export default function About() {
   )
 }
 
-function MissionStat({ icon, text }) {
+function MissionStat({ icon, text }: MissionStatProps) {
   return (
     <div className="flex items-center bg-white p-3 rounded-lg shadow-sm">
       <div className="mr-3">{icon}</div>
